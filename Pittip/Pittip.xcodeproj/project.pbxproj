@@ -14,6 +14,7 @@
 		1C3DF1491D825929004600F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C3DF1471D825929004600F3 /* LaunchScreen.storyboard */; };
 		1C3DF1541D825929004600F3 /* PittipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3DF1531D825929004600F3 /* PittipTests.swift */; };
 		1C3DF15F1D825929004600F3 /* PittipUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3DF15E1D825929004600F3 /* PittipUITests.swift */; };
+		1C5AA63D1D92587D0045DEEC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5AA63C1D92587D0045DEEC /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		1C3DF15A1D825929004600F3 /* PittipUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PittipUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C3DF15E1D825929004600F3 /* PittipUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PittipUITests.swift; sourceTree = "<group>"; };
 		1C3DF1601D825929004600F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C5AA63C1D92587D0045DEEC /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		1C3DF1321D825928004600F3 = {
 			isa = PBXGroup;
 			children = (
+				1C5AA63C1D92587D0045DEEC /* SettingsViewController.swift */,
 				1C3DF13D1D825929004600F3 /* Pittip */,
 				1C3DF1521D825929004600F3 /* PittipTests */,
 				1C3DF15D1D825929004600F3 /* PittipUITests */,
@@ -262,6 +265,7 @@
 			files = (
 				1C3DF1411D825929004600F3 /* ViewController.swift in Sources */,
 				1C3DF13F1D825929004600F3 /* AppDelegate.swift in Sources */,
+				1C5AA63D1D92587D0045DEEC /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
