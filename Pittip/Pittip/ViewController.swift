@@ -38,12 +38,12 @@ class ViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("view will appear")
+        //print("view will appear")
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("view did appear")
+        //print("view did appear")
         
         billField.becomeFirstResponder()
         let defaults = UserDefaults.standard
@@ -51,7 +51,7 @@ class ViewController: UIViewController {
         tipControl.selectedSegmentIndex = defaultTipIndex
         
         let stateTax = defaults.double(forKey: "stateTax") * 100
-        print(stateTax)
+        //print(stateTax)
         taxPercentLabel.text = String(format: "%.2f", stateTax)
         stateLabel.text = defaults.string(forKey: "state")
         calculateTipHelper()
@@ -59,12 +59,12 @@ class ViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        print("view will disappear")
+        //print("view will disappear")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        print("view did disappear")
+        //print("view did disappear")
     }
     
     @IBAction func onTap(_ sender: AnyObject) {
@@ -81,11 +81,11 @@ class ViewController: UIViewController {
         let bill = Double(billField.text!) ?? 0
         let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
         let taxPercent = Double(taxPercentLabel.text!) ?? 0
-        print("taxPercent ", taxPercent)
+        //print("taxPercent ", taxPercent)
         
         let defaults = UserDefaults.standard
         let taxTotalSetting = defaults.double(forKey: "customTax")
-        print("t", taxTotalSetting)
+        //print("t", taxTotalSetting)
         
         var taxTotal = bill * taxPercent / 100.0
         

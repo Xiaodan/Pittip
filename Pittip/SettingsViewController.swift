@@ -176,7 +176,7 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBAction func setCustomTaxValue(_ sender: AnyObject) {
             let defaults = UserDefaults.standard
             let customTaxValue = Double(customTax.text!) ?? 0
-            print(customTaxValue)
+            // print(customTaxValue)
         defaults.set(customTaxValue, forKey: "customTax")
         defaults.synchronize()
     }
@@ -202,10 +202,11 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         // This method is triggered whenever the user makes a change to the picker selection.
         // The parameter named row and component represents what was selected.
+        
         selectedState = states[row]
-        print(selectedState)
+        // print(selectedState)
         selectedStateTax = stateTaxes[row]
-        print(selectedStateTax)
+        // print(selectedStateTax)
         
         let defaults = UserDefaults.standard
         defaults.set(selectedState, forKey: "state")
