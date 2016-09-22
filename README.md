@@ -1,8 +1,9 @@
 # Pre-work - PitTip
 
-PitTip is a tip calculator application for iOS.  
+PitTip is a tip calculator application for iOS. This App was written with Xcode 8 and Swift 3.    
 This is my App Icon:  
-<img src="/Pittip/Pittip/Assets.xcassets/pittip_new/ios/AppIcon.appiconset/Icon-App-40x40@3x.png" title="App Icon" width="" alt="App Icon" />
+<img src="/Pittip/Pittip/Assets.xcassets/pittip_new/ios/AppIcon.appiconset/Icon-App-40x40@3x.png" title="App Icon" width="" alt="App Icon" />   
+
 
 Submitted by: Sally Zhang
 
