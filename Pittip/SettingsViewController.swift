@@ -14,11 +14,14 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
 
     @IBOutlet weak var statePicker: UIPickerView!
     var states: [String] = [String]()
+    var stateTaxes: [Double] = [Double]()
     
-    //let states = ["CA", "IL", "NY", "FL", "TX", "AZ"]
     var selectedState = ""
+    var selectedStateTax = 0.00
     
     @IBOutlet weak var defaultTip: UISegmentedControl!
+    
+    @IBOutlet weak var customTax: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +36,10 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         self.statePicker.delegate = self
         
         // Input data into the array:
-        states = [ "AK - Alaska",
+        states = [
+                   "Customized Tax",
+                   "No-tax State",
+                   "AK - Alaska",
                    "AL - Alabama",
                    "AR - Arkansas",
                    "AS - American Samoa",
@@ -88,6 +94,66 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                    "WI - Wisconsin", 
                    "WV - West Virginia", 
                    "WY - Wyoming" ]
+        
+        //http://taxfoundation.org/sites/taxfoundation.org/files/docs/LOST2016-01_0.png
+        
+        stateTaxes = [ 0,
+                       0,
+                       0.0178,
+                       0.0897,
+                       0.093,
+                       0,
+                       0.0825,
+                       0.0848,
+                       0.0752,
+                       0.0635,
+                       0.0575,
+                       0,
+                       0.0666,
+                       0.0701,
+                       0.04,
+                       0.0435,
+                       0.0679,
+                       0.0603,
+                       0.0864,
+                       0.07,
+                       0.086,
+                       0.06,
+                       0.09,
+                       0.0625,
+                       0.06,
+                       0.0625,
+                       0.06,
+                       0.0727,
+                       0.0786,
+                       0.0707,
+                       0,
+                       0.069,
+                       0.0682,
+                       0.0687,
+                       0,
+                       0.0697,
+                       0.0751,
+                       0.0798,
+                       0.0849,
+                       0.0714,
+                       0.0882,
+                       0,
+                       0.0634,
+                       0.115,
+                       0.07,
+                       0.0722,
+                       0.0584,
+                       0.0946,
+                       0.0817,
+                       0.0669,
+                       0.0563,
+                       0,
+                       0.0617,
+                       0.0889,
+                       0.0541,
+                       0.062,
+                       0.0542 ]
     }
 
     override func didReceiveMemoryWarning() {
@@ -103,6 +169,18 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         // print("index: ", defaultTip.selectedSegmentIndex)
         
     }
+    @IBAction func onTap2(_ sender: AnyObject) {
+        view.endEditing(true)
+    }
+    
+    @IBAction func setCustomTaxValue(_ sender: AnyObject) {
+            let defaults = UserDefaults.standard
+            let customTaxValue = Double(customTax.text!) ?? 0
+            print(customTaxValue)
+        defaults.set(customTaxValue, forKey: "customTax")
+        defaults.synchronize()
+    }
+    
     
     // The number of columns of data
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -126,6 +204,16 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         // The parameter named row and component represents what was selected.
         selectedState = states[row]
         print(selectedState)
+        selectedStateTax = stateTaxes[row]
+        print(selectedStateTax)
+        
+        let defaults = UserDefaults.standard
+        defaults.set(selectedState, forKey: "state")
+        defaults.set(selectedStateTax, forKey: "stateTax")
+        if(row > 0) {
+            defaults.set(0.0, forKey: "customTax")
+        }
+        defaults.synchronize()
     }
     
     /*

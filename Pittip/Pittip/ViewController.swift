@@ -14,13 +14,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipControl: UISegmentedControl!
-   // @IBOutlet weak var taxLabel: UILabel!
-    @IBOutlet weak var taxField: UITextField!
+    
+    @IBOutlet weak var taxTotalLabel: UILabel!
+    
+    @IBOutlet weak var taxPercentLabel: UILabel!
+    
+    @IBOutlet weak var stateLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         billField.text = "100.00"
+        taxPercentLabel.text = "0.00"
+        stateLabel.text = "??"
         tipControl.selectedSegmentIndex = 0
         calculateTipHelper()
     }
@@ -42,6 +48,11 @@ class ViewController: UIViewController {
         let defaults = UserDefaults.standard
         let defaultTipIndex = defaults.integer(forKey: "defaultTipIndex")
         tipControl.selectedSegmentIndex = defaultTipIndex
+        
+        let stateTax = defaults.double(forKey: "stateTax") * 100
+        print(stateTax)
+        taxPercentLabel.text = String(format: "%.2f", stateTax)
+        stateLabel.text = defaults.string(forKey: "state")
         calculateTipHelper()
     }
     
@@ -68,11 +79,25 @@ class ViewController: UIViewController {
         
         let bill = Double(billField.text!) ?? 0
         let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
-        //let tax = bill * 0.0875
-        let tax = Double(taxField.text!) ?? 0
-        let total = bill + tax + tip
+        let taxPercent = Double(taxPercentLabel.text!) ?? 0
+        print("taxPercent ", taxPercent)
         
+        let defaults = UserDefaults.standard
+        let taxTotalSetting = defaults.double(forKey: "customTax")
+        print("t", taxTotalSetting)
         
+        var taxTotal = bill * taxPercent / 100.0
+        
+        if(taxTotalSetting > 0) {
+            taxPercentLabel.text = String(format: "%.2f", taxTotalSetting * 100.0 / bill)
+            taxTotalLabel.text = String(format: "$%.2f", taxTotalSetting)
+            stateLabel.text = "Customized Tax"
+            taxTotal = taxTotalSetting
+            
+        }
+        let total = bill + taxTotal + tip
+        
+        taxTotalLabel.text = String(format: "$%.2f", taxTotal)
         //tipLabel.text = "$\(tip)"
         tipLabel.text = String(format: "$%.2f", tip)
         //totalLabel.text = "$\(total)"
