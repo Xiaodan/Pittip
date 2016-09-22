@@ -39,7 +39,9 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 ## Notes
 
 Describe any challenges encountered while building the app.
-- This is my first iOS app.  
+- In my Settings page, I tried to add a widget that enables people to choose a state for calculating the state sales tax. I then found out that the UIPickerView would help. However, people may also want to enter a customized tax shown on the restaurant receipt. So, I had to make the taxTotalLabel respond to either the UITextField or the UIPickerView. When the customized tax is selected, the state shown on the main page should be "Customized tax". Some logics were implemented to make this happen smoothly.   
+- This is my first iOS app. So, I spent a lot of time in figuring how to keep data persistent. For the current solution for storing the combined tax rates of each state, I used two arrays. Later, I may try different data structures and data storages. 
+
 ## License
 
     Copyright 2016 Sally Zhang
