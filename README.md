@@ -32,7 +32,8 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+This is the launching page when you restart the app. The keyboard will automatically show up so the user can enter the bill amount.  
+<img src='LiceCapGifs/launch_app.gif' title='App Launching Page' width='' alt='App Launching Page' />  
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
