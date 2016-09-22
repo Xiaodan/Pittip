@@ -34,8 +34,11 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
+This is the overview of the application, which includes the launching page, the main page and the settings page.    
+<img src='/Pittip/LiceCapGifs/overview.gif' title='App Overview' width='' alt='App Overview' />
+
 This is the launching page when you restart the app. The keyboard will automatically show up so the user can enter the bill amount.  
-<img src='/Pittip/LiceCapGifs/launch_app.gif' title='App Launching Page' width='' alt='App Launching Page' />  
+<img src='/Pittip/LiceCapGifs/launch_app2.gif' title='App Launching Page' width='' alt='App Launching Page' />  
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
