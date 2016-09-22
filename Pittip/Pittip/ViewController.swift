@@ -45,6 +45,7 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
         print("view did appear")
         
+        billField.becomeFirstResponder()
         let defaults = UserDefaults.standard
         let defaultTipIndex = defaults.integer(forKey: "defaultTipIndex")
         tipControl.selectedSegmentIndex = defaultTipIndex
