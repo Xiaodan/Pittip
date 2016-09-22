@@ -39,6 +39,10 @@ This is the overview of the application, which includes the launching page, the 
 
 This is the launching page when you restart the app. The keyboard will automatically show up so the user can enter the bill amount.  
 <img src='/Pittip/LiceCapGifs/launch_app2.gif' title='App Launching Page' width='' alt='App Launching Page' />  
+This is the main page of PitTip. The user can modify the bill amount with the keyboard as well as adjust the tip percentage with the segmented control. There are four choices for now: 15%, 18%, 20% and 25%. Selected tax rate is in purple color.  
+<img src='/Pittip/LiceCapGifs/main_page.gif' title='Main Page' width='' alt='Main Page' />
+
+
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
