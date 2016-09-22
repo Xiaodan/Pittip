@@ -1,6 +1,8 @@
 # Pre-work - PitTip
 
-PitTip is a tip calculator application for iOS.
+PitTip is a tip calculator application for iOS.  
+This is my App Icon:  
+<img src="/Pittip/Pittip/Assets.xcassets/pittip_new/ios/AppIcon.appiconset/Icon-App-40x40@3x.png" title="App Icon" width="" alt="App Icon" />
 
 Submitted by: Sally Zhang
 
@@ -24,7 +26,7 @@ The following **additional** features are implemented:
 - [x] Designed and added an app icon with the pre-launch loading screen
 - [x] Created a better UI using color combinations
 - [x] Dismissing keyboard
-- [x] Settings page to set a customized tax amount or to choose a state for using the average combined sales tax rate of that state
+- [x] Settings page to enter a customized tax amount or to choose a state for using the average combined sales tax rate of that state from the scrolling list  
 - [x] Main page will show either a customized tax is entered or a state is selected
 
 
