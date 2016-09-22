@@ -35,12 +35,16 @@ The following **additional** features are implemented:
 Here's a walkthrough of implemented user stories:
 
 This is the overview of the application, which includes the launching page, the main page and the settings page.    
-<img src='/Pittip/LiceCapGifs/overview.gif' title='App Overview' width='' alt='App Overview' />
+<img src='/Pittip/LiceCapGifs/overview.gif' title='App Overview' width='' alt='App Overview' />  
 
-This is the launching page when you restart the app. The keyboard will automatically show up so the user can enter the bill amount.  
-<img src='/Pittip/LiceCapGifs/launch_page.gif' title='App Launching Page' width='' alt='App Launching Page' />  
-This is the main page of PitTip. The user can modify the bill amount with the keyboard as well as adjust the tip percentage with the segmented control. There are four choices for now: 15%, 18%, 20% and 25%. Selected tax rate is in purple color.  
+This is the launching page when the user restarts the app. The keyboard will automatically show up so the user can enter the bill amount.  
+<img src='/Pittip/LiceCapGifs/launch_page.gif' title='App Launching Page' width='' alt='App Launching Page' />   
+
+On the main page of PitTip, the user can modify the bill amount with the keyboard as well as adjust the tip percentage with the segmented control. There are four choices for now: 15%, 18%, 20% and 25%. Selected tax rate is in purple color.  
 <img src='/Pittip/LiceCapGifs/main_page.gif' title='Main Page' width='' alt='Main Page' />
+
+On the settings page of PitTip, the user can 1) set a default tip percentage; 2) set a customized tax amount that will be added toward the total on the main page; 3) choose a state with the scrolling list picker and the combined sales tax will be reflected on the main page and will be used to calculate the tax total.  
+<img src='/Pittip/LiceCapGifs/settings_page.gif' title='Settings Page' width='' alt='Settings Page' />
 
 
 
