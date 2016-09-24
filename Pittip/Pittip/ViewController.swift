@@ -78,6 +78,10 @@ class ViewController: UIViewController {
     func calculateTipHelper() {
         let tipPercentages = [0.15, 0.18, 0.2, 0.25]
         
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.maximumFractionDigits = 2
+        
         let bill = Double(billField.text!) ?? 0
         let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
         let taxPercent = Double(taxPercentLabel.text!) ?? 0
@@ -98,11 +102,17 @@ class ViewController: UIViewController {
         }
         let total = bill + taxTotal + tip
         
-        taxTotalLabel.text = String(format: "$%.2f", taxTotal)
+        //taxTotalLabel.text = String(format: "$%.2f", taxTotal)
+        taxTotalLabel.text = formatter.string(from: taxTotal as NSNumber)
+        
         //tipLabel.text = "$\(tip)"
-        tipLabel.text = String(format: "$%.2f", tip)
+        //tipLabel.text = String(format: "$%.2f", tip)
+        tipLabel.text = formatter.string(from: tip as NSNumber)
+        
         //totalLabel.text = "$\(total)"
-        totalLabel.text = String(format: "$%.2f", total)
+        //totalLabel.text = String(format: "$%.2f", total)
+        totalLabel.text = formatter.string(from: total as NSNumber)
+        
     }
 
 }

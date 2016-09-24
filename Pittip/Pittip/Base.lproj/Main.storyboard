@@ -134,7 +134,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qOP-Jw-9jE">
-                                <frame key="frameInset" minX="206" minY="171" width="115" height="21"/>
+                                <frame key="frameInset" minX="101" minY="171" width="220" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.10018028850000001" green="0.10018028850000001" blue="0.10018028850000001" alpha="1" colorSpace="calibratedRGB"/>
